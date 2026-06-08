@@ -8,6 +8,10 @@ SELECT *
 FROM students
 WHERE date_of_birth LIKE '1990-%';
 
+SELECT *
+FROM students as s
+WHERE YEAR(s.date_of_birth) = "1990";
+
 /* Milestone 2 - Selezionare tutti i corsi che valgono più di 10 crediti (479) */
 
 SELECT *
@@ -42,7 +46,8 @@ WHERE level = "magistrale";
 
 /* Milestone 7 - Da quanti dipartimenti è composta l'università? (12) */
 
-SELECT * FROM departments;
+SELECT count(*) AS numero_dipartimenti
+FROM departments;
 
 /* Milestone 8 - Quanti sono gli insegnanti che non hanno un numero di telefono? (50) */
 
